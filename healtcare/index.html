@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Healtcare</title>
+</head>
+<body>
+    <div id="app">
+    <header class="header" :class="[{header__white: scrollPosition > 90}, {header__white:showMenu}]">
+        <div class="container">
+            <div class="logo header__logo">HEALTCARE.</div>
+            <nav :class="{active : showMenu}">
+                <a class="nav__link active" href="#">Home</a>
+                <a class="nav__link" href="#">About</a>
+                <a class="nav__link" href="#">Article</a>
+                <a class="nav__link" href="#">Service</a>
+                <button class="btn">Get Started</button>
+
+            </nav>
+            <div class="burger" @click="showMenu = !showMenu" :class="{active : showMenu}">
+                <div class="line"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="first-screen">
+            <div class="container">
+                <div class="first-screen__content">
+                    <h1 class="title-big">Find And Search Your <br><span>Suitable Doctor's</span></h1>
+                    <h3 class="subtitle-small">Join us and take care of yourself and your family with health 
+                        services that will make you feel confident and safe in your daily life</h3>
+
+                    <form action="" class="first-screen__form">
+                        <input type="search" placeholder="Find your doctor" id="find-doctor">
+                        <div class="option__location" @click="optionActive = !optionActive" :class="{active : optionActive}">
+                            <div class="icon-location"></div>
+                            <select name="location" id="location" >
+                                <div class="icon-location"></div>
+                                <option value="New York, USA">New York, USA</option>
+                                <option value="Los Angeles, USA">Los Angeles, USA</option>
+                                <option value="Seatle, USA">Seatle, USA</option>
+                                <option value="San Francisco, USA">San Francisco, USA</option>
+                            </select>
+                        </div>
+                       
+                        <button class="btn icon-search"></button>
+                        
+                    </form>
+
+                 
+                </div>
+                <div class="first-screen__image">
+                    <div class="first-screen__bg">
+                        <img src="assets/img/first-screen-img.png" alt="first-screen-img">
+                        <div class="first-screen__bg-items">
+                         <img src="assets/img/first-screen-items.png" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </section>
+
+         <section class="steps">
+             <div class="container">
+                 <h1 class="title">3 Easy Steps and Get Your Solution</h1>
+                 <div class="steps__items">
+                     <div class="steps__item item">
+                         <div class="item__icon">
+                             <img src="assets/img/step-icon-search.png" alt="step-icon-search">
+                         </div>
+                         <div class="item__title">Find best doctor’s</div>
+                         <div class="item__description">Find your doctor easily with a minimum of effort. We've kept everything organised for you.</div>
+                     </div>
+
+                     <div class="steps__item item">
+                        <div class="item__icon">
+                            <img src="assets/img/step-icon-calendar.png" alt="step-icon-calendar">
+                        </div>
+                        <div class="item__title">Get Appointment</div>
+                        <div class="item__description">Ask for an appointment of the doctor quickly with almost a single click. We take care of the rest.</div>
+                    </div>
+
+                    <div class="steps__item item">
+                        <div class="item__icon">
+                            <img src="assets/img/step-icon-consultations.png" alt="step-icon-consultations">
+                        </div>
+                        <div class="item__title">Happy Consultations</div>
+                        <div class="item__description">Do consultations and  take the service based on your appointment. Get back to good health.</div>
+                    </div>
+                 </div>
+             </div>
+         </section>
+
+         <section class="quality">
+             <div class="container">
+                 <div class="quality__image">
+                     <img src="assets/img/quality-img.png" alt="quality-img">
+                 </div>
+                 <div class="quality__content wow bounceInUp">
+                     <h1 class="title">Best quality service with our experience doctors</h1>
+                    <h2 class="subtitle">With our top doctors, we are able to provide best medical services 
+                        above average We have highly experienced doctors, 
+                        so don't worry They are also very talented in their fields</h2>
+                    <ul class="quality__list">
+                        <li><div class="icon-check"></div>Search your specialist & Online consultations anywhere</li>
+                        <li><div class="icon-check"></div>Consultation our top specialists</li>
+                        <li><div class="icon-check"></div>Doctors are available 24/7</li>
+                    </ul>
+                    <button class="btn"> Explore specialist <div class="icon-arrow-right"></div></button>
+                    </div>
+                 
+
+             </div>
+         </section>
+
+         <section class="ourService">
+            <div class="container">
+                <h1 class="title">Our Service</h1>
+                <h2 class="subtitle">Our doctors have high qualified skills and are guaranteed to help you recover from your disease.</h2>
+                <div class="swiper-container ourService__slider">
+                    <div class="swiper-wrapper items">
+                        <div class="swiper-slide item">
+                            <div class="item__icon"><img src="assets/img/service-icon-cardiology.svg" alt="service-icon-cardiology"></div>
+                            <div class="item__title">Cardiology</div>
+                            <div class="item__description">Our cardiologists are skilled at  the diagnosing and treating diseases
+                                of the cardiovascular system.</div>
+                        </div>
+
+                        <div class="swiper-slide item">
+                            <div class="item__icon"><img src="assets/img/service-icon-pulmonology.svg" alt="service-icon-pulmonology"></div>
+                            <div class="item__title">Pulmonology</div>
+                            <div class="item__description">Our Pulmonologist are skilled at diagnosing 
+                                treating diseases of the Pulmonology system.</div>
+                        </div>
+
+
+                      <div class="swiper-slide item">
+                          <div class="item__icon"><img src="assets/img/service-icon-medicine.svg" alt="service-icon-medicine"></div>
+                          <div class="item__title">Medicine</div>
+                          <div class="item__description">Our medcine doctor are skilled at  diagnosing treating diseases of the  latest medicne system.</div>
+                      </div>
+                      
+                    
+                    </div>
+                    
+                    <div class="swiper-pagination"></div>
+                  </div>
+            </div>
+         </section>
+
+         <section class="ourDoctors">
+             <div class="container">
+                 <h1 class="title">Meet Our Certified Online Doctors</h1>
+                 <h2 class="subtitle">Our online doctors have an average of 15 years experience and a
+                      98% satisfaction rating, they really set us apart!</h2>
+                 <div class="ourDoctors__items items">
+                     <div class="item">
+                         <div class="item__image"><img src="assets/img/our-doctors-img1.png" alt="our-doctors-img1"></div>
+                         <div class="item__title">Dr Amanda Linda</div>
+                         <div class="item__description">Dentist Specilist</div>
+                     </div>
+
+                     <div class="item">
+                        <div class="item__image"><img src="assets/img/our-doctors-img2.png" alt="our-doctors-img2"></div>
+                        <div class="item__title">Dr. Alisa Rahman</div>
+                        <div class="item__description">Carddiologist Specilist</div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item__image"><img src="assets/img/our-doctors-img3.png" alt="our-doctors-img3"></div>
+                        <div class="item__title">Dr. Anthony Fauci</div>
+                        <div class="item__description">Neurology Specilist</div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item__image"><img src="assets/img/our-doctors-img4.png" alt="our-doctors-img4"></div>
+                        <div class="item__title">Dr. Khalid Abbed</div>
+                        <div class="item__description">Cancer Specilist</div>
+                    </div>
+                 </div>   
+                 <button class="btn">Explore All Doctors</button>  
+             </div>
+         </section>
+
+         <section class="mobileApps">
+            <div class="container">
+                <div class="mobileApps__image"><img src="assets/img/mobile-apps-img.png" alt="mobile-apps-img"></div>
+                <div class="mobileApps__content">
+                    <h1 class="title"> Mobile apps are available Get HealthCare for free!</h1>
+                    <h2 class="subtitle">Get on-demand access to a doctor on your phone with the free HealthCare 
+                        mobile app. Download and register
+                         on our app for free and feel safe for all your family</h2>
+                    <div class="platforms">
+                        <div class="googlePlay"><a href="#"><img src="assets/img/google-play.svg" alt="google-play"></a></div>
+                        <div class="appStore"><a href="#"><img src="assets/img/app-store.svg" alt="app-store"></a></div>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+         <section class="testmonials">
+             <div class="container">
+                 <h1 class="title">Look our Clients have to say about us</h1>
+
+                 <div class="swiper-container testmonials__slider">
+                    <div class="swiper-wrapper items">
+                        <div class="swiper-slide item">
+                            <div class="icon-quote"></div>
+                            <div class="item__container">
+                                <div class="item__image"><img src="assets/img/testm-image1.png" alt="testm-image1"></div>
+                            <div class="line"><div class="item__title">Alan Zara dilan</div><div class="item__rating">★★★★★</div></div>
+                            <div class="item__location">New York, America, USA</div>
+                            <div class="item__description">Telehealth is fueled by digital technologies and DocTime 
+                                telemedicine app has brought a great revolution in medical services specially an 
+                                overpopulated country where virtual chamber 
+                                can create at anywhere thoughout country</div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="swiper-slide item">
+                            <div class="icon-quote"></div>
+                            <div class="item__container">
+                                <div class="item__image"><img src="assets/img/testm-image2.png" alt="testm-image1"></div>
+                            <div class="line"><div class="item__title">Alan Zara dilan</div><div class="item__rating">★★★★★</div></div>
+                            <div class="item__location">New York, America, USA</div>
+                            <div class="item__description">Telehealth is fueled by digital technologies and DocTime 
+                                telemedicine app has brought a great revolution in medical services specially an 
+                                overpopulated country where virtual chamber 
+                                can create at anywhere thoughout country</div>
+                            </div>
+                            
+                        </div>
+
+
+                        <div class="swiper-slide item">
+                            <div class="icon-quote"></div>
+                            <div class="item__container">
+                                <div class="item__image"><img src="assets/img/testm-image3.png" alt="testm-image1"></div>
+                            <div class="line"><div class="item__title">Alan Zara dilan</div><div class="item__rating">★★★★★</div></div>
+                            <div class="item__location">New York, America, USA</div>
+                            <div class="item__description">Telehealth is fueled by digital technologies and DocTime 
+                                telemedicine app has brought a great revolution in medical services specially an 
+                                overpopulated country where virtual chamber 
+                                can create at anywhere thoughout country</div>
+                            </div>
+                            
+                        </div>
+                      
+                    
+                    </div>
+                    
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  </div>
+             </div>
+         </section>
+         <section class="bookAnAppointment">
+             <div class="container">
+                 <div class="bookAnAppointment__content">
+                     <h1 class="title">It’s time change your life today </h1>
+                     <button class="btn">Book an Appointment</button>
+                 </div>
+                 <div class="bookAnAppointment__image">
+                     <img src="assets/img/book-an-appointment-img.png" alt="book-an-appointment-img">
+                 </div>
+             </div>
+         </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__contacts">
+                <div class="footer__logo logo">HEALTCARE.</div>
+                <div class="footer__location">Merarie, 3689 Bassel Street, LA, Loisiana</div>
+                <div class="footer__phone">Contact us: <a href="phone:225-788-5489">225-788-5489</a></div>
+                <div class="footer__social">
+                    <div class="icon-inst"></div>
+                    <div class="icon-tw"></div>
+                    <div class="icon-yb"></div>
+                </div>
+            </div>
+            <div class="footer__menu">
+                <nav class="category">
+                    <h3 class="footer__title">Category</h3>
+                    <a href="#" class="menu__link">Home</a>
+                    <a href="#" class="menu__link">About</a>
+                    <a href="#" class="menu__link">Services</a>
+                    <a href="#" class="menu__link">Reviews</a>
+                    <a href="#" class="menu__link">Article</a>
+                </nav>
+                <nav class="about">
+                    <h3 class="footer__title">About</h3>
+                    <a href="#" class="menu__link">Partners</a>
+                    <a href="#" class="menu__link">Careers</a>
+                    <a href="#" class="menu__link">Press</a>
+                    <a href="#" class="menu__link">Community</a>
+                </nav>
+            </div>
+            <div class="footer__subscribe-form">
+                <h3 class="footer__title">Subscribe newsletter</h3>
+                <p class="footer__subtitle">Sign up for tips, new destinations, and exclusive promos.</p>
+                <form action="" class="footer__form">
+                    <input type="email" class="footer__email" placeholder="Enter your email">
+                    <button class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-copy">
+        <div class="container">
+            <p class="footer-copy__copy">© 2021 Healthcare - All rights reserved.</p>
+            <nav class="footer-copy__nav">
+                <a href="#">Privacy</a>
+                <a href="#">Security</a>
+                <a href="#">Terms</a>
+            </nav>
+        </div>
+    </div>
+</div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        let vue = new Vue({
+        el: '#app',
+        data: {
+            scrollPosition: null, 
+            showMenu:false, 
+            optionActive:false
+        }, 
+        methods: {
+            updateScroll() {
+            this.scrollPosition = window.scrollY
+             }
+            },
+            mounted() {
+            window.addEventListener('scroll', this.updateScroll);
+            }
+
+        })
+
+
+
+
+    </script>
+   
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="assets/js/sliders.js"></script>
+    
+</body>
+</html>
