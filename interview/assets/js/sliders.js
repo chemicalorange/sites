@@ -11,3 +11,12 @@ var swiper = new Swiper(".projects__slider", {
     mousewheel:true,
    
   });
+
+  var swiper = new Swiper(".projectInfo__slider", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    slidesPerView: 2.5,
+    spaceBetween: 59,
+  });

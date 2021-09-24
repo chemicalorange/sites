@@ -1,4 +1,4 @@
-var firstScreenHeight = document.querySelector('.first-screen').clientHeight;
+var firstScreenHeight = document.querySelector('.first-screen').clientHeight - 50;
 var header = document.querySelector('.header');
 
 window.addEventListener('scroll', ()=>{
